@@ -1,12 +1,15 @@
 <template>
   <div id="app">
-	  UNDER CONSTRUCTION
+	  <head-bar></head-bar>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import HeadBar from "./components/HeadBar.vue"
 export default {
-  name: 'app'
+  name: 'app',
+  components:{HeadBar}
 }
 </script>
 
