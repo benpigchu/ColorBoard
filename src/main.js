@@ -21,7 +21,7 @@ const router = new VueRouter({
       path: "/:hex",
       name: "color",
       beforeEnter:(to, from, next) => {
-        if(to.params.hex in list){
+        if(("#"+to.params.hex) in list){
           next()
         }else{
           next("/")
@@ -51,8 +51,7 @@ const store = new Vuex.Store({
     navigation(context,route) {
       context.commit("toggleSelectStatus",route.name=="color")
       if(route.name=="color"){
-        if(route.params.hex in list){
-          new Color("#"+route.params.hex)
+        if("#"+route.params.hex in list){
           context.commit("selectColor","#"+route.params.hex)
         }else{
           router.replace("/"+context.state.selectedColor.slice(1))

@@ -1,5 +1,5 @@
 {
-	"000000":{"name":"Black","description":"The pure black."},
-	"ff7f00":{"name":"The orange of Benpigchu","description":"The color of Benpigchu, the developer of this page."},
-	"ffffff":{"name":"White","description":"The pure white."}
+	"#000000":{"name":"Black","description":"The pure black."},
+	"#ff7f00":{"name":"The orange of Benpigchu","description":"The color of Benpigchu, the developer of this page."},
+	"#ffffff":{"name":"White","description":"The pure white."}
 }

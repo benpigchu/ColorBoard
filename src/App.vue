@@ -1,7 +1,7 @@
 <template>
   <div id="app" v-bind:style="{'background-color':$store.state.selectedColor,color:$store.getters.textColor,'transition-property':'background,color','transition-duration':'200ms'}">
     <color-list-view :color-list="colorList" />
-    <color-info :color="$store.state.selectedColor" name="cat" description="moewmoewmoew" />
+    <color-info :color="$store.state.selectedColor" :name="colorList[$store.state.selectedColor].name" :description="colorList[$store.state.selectedColor].description" />
   </div>
 </template>
 
