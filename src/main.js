@@ -14,8 +14,19 @@ const router = new VueRouter({
   mode: "hash",
   routes: [
     {
+      path: "/",
+      name: "home",
+    },
+    {
       path: "/:hex",
       name: "color",
+      beforeEnter:(to, from, next) => {
+        if(to.params.hex in list){
+          next()
+        }else{
+          next("/")
+        }
+      }
     }
   ]
 })
@@ -32,10 +43,6 @@ const store = new Vuex.Store({
       state.selectedColor = color;
     }
   }
-})
-
-router.beforeEach((to, from, next) => {
-  next()
 })
 
 const app = new Vue({
