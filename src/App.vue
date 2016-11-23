@@ -1,17 +1,15 @@
 <template>
-  <div id="app" v-bind:style="{'background-color':$store.state.backgroundColor,color:$store.getters.textColor,'transition-property':'background,color','transition-duration':'200ms'}">
-	  <head-bar></head-bar>
-    <transition name="fade" mode="out-in">
-      <router-view id="view"></router-view>
-    </transition>
+  <div id="app" v-bind:style="{'background-color':$store.state.selectedColor,color:$store.getters.textColor,'transition-property':'background,color','transition-duration':'200ms'}">
+    <color-info :color="$store.state.selectedColor" name="cat" description="moewmoewmoew" />
   </div>
 </template>
 
 <script>
-import HeadBar from "./components/HeadBar.vue"
+import colorInfo from './components/colorInfo.vue'
 export default {
   name: 'app',
-  components:{HeadBar}
+  props:["colorList"],
+  components:{colorInfo}
 }
 </script>
 

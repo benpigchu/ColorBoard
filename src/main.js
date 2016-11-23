@@ -1,57 +1,46 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-import VueRouter from 'vue-router'
+import Vue from "vue"
+import Vuex from "vuex"
+import VueRouter from "vue-router"
 Vue.use(Vuex)
 Vue.use(VueRouter)
 
-import Color from 'color'
+import Color from "color"
 
-import App from './App.vue'
+import App from "./App.vue"
+
+import list from "./data.json"
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: "hash",
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: { template: "<div>home</div>" }
-    },
-    {
-      path: '/color-:hex',
-      name: 'color',
-      component: { template: "<div>color:#{{$route.params.hex}}</div>" }
+      path: "/:hex",
+      name: "color",
     }
   ]
 })
 
 const store = new Vuex.Store({
   state: {
-    view: 'home',
-    backgroundColor: '#ff7f00',
-    params:{}
+    selectedColor: "#000000",
   },
   getters: {
     textColor: (state) => new Color(state.backgroundColor).luminosity() <= 0.5 ? "#FFFFFF" : "#000000"
   },
   mutations: {
-    replaceBackgroundColor(state, color) {
-      state.backgroundColor = color;
-    },
-    navigate(state, route) {
-      state.view=route.name
-      state.params=route.params
+    selectColor(state, color) {
+      state.selectedColor = color;
     }
   }
 })
 
 router.beforeEach((to, from, next) => {
-  store.commit('navigate',to)
   next()
 })
 
 const app = new Vue({
-  el: '#app',
+  el: "#app",
   router,
   store,
-  render: h => h(App)
+  render: h => h(App,{props:{colorList:list}})
 })
