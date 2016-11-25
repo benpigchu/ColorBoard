@@ -14,6 +14,6 @@ export default {
 </script>
 
 <style scoped>
-.link{color:inherit;text-decoration:none}
+.link{color:inherit;text-decoration:none;width:120px;height:160px;margin:8px}
 .colorblock{width:120px;height:60px}
 </style>

@@ -19,5 +19,5 @@ export default {
 *{box-sizing:border-box}
 .app{position:fixed;width:100%;height:100%;margin:0;left:0;top:0;display:flex}
 .app{padding:64px;transition-property:background,color;transition-duration:350ms}
-.info,.list-view{flex-basis:0;flex-grow:1}
+.info,.list-view{flex-basis:0;flex-grow:1;flex-shrink:1}
 </style>
