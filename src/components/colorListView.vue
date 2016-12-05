@@ -16,5 +16,5 @@ export default {
 </script>
 
 <style scoped>
-.list{display:flex;padding:16px;flex-wrap:wrap;align-content:flex-start}
+.list{display:flex;padding:16px;flex-wrap:wrap;align-content:flex-start;overflow:auto}
 </style>
