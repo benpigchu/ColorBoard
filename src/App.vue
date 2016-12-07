@@ -17,7 +17,8 @@ export default {
 
 <style>
 *{box-sizing:border-box}
-.app{position:fixed;width:100%;height:100%;margin:0;left:0;top:0;display:flex}
+.app{position:absolute;width:100%;min-height:100%;margin:0;left:0;top:0;overflow-y:visible}
 .app{padding:64px;transition-property:background,color;transition-duration:350ms}
-.info,.list-view{flex-basis:0;flex-grow:1;flex-shrink:1}
+.list-view{width:50%}
+.info{width:50%;position:fixed;right:0;top:0;bottom:0;margin-top:64px;margin-bottom:64px;padding-right:64px}
 </style>
