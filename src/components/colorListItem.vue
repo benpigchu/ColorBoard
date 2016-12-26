@@ -11,8 +11,8 @@
 
 import Color from "color"
 export default {
-  name: 'colorListItem',
-  props:['color','name'],
+	name: 'colorListItem',
+	props:['color','name'],
 	computed:{
 		textColor:function(){
 			return new Color(this.color).luminosity() <= 0.5 ? "#FFFFFF" : "#000000"
