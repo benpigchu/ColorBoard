@@ -1,7 +1,7 @@
 {
 	"#000000":{"name":"Black","description":"The pure black."},
-	"#ff7f00":{"name":"Orange of BPC","description":"The color of Benpigchu, the developer of this page."},
-	"#ffffff":{"name":"White","description":"The pure white."},
+	"#FF7F00":{"name":"Orange of BPC","description":"The color of Benpigchu, the developer of this page."},
+	"#FFFFFF":{"name":"White","description":"The pure white."},
 
 	"#FFEBEE":{"name":"Red 50","description":"A color from the Material design guideline."},
 	"#FFCDD2":{"name":"Red 100","description":"A color from the Material design guideline."},

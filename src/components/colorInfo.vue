@@ -9,8 +9,7 @@
 <script>
 export default {
   name: 'colorInfo',
-  props:['color','description','name'],
-
+  props:['color','description','name']
 }
 </script>
 
